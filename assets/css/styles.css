@@ -526,6 +526,17 @@ button {
   font-size: 0.88rem;
 }
 
+.project-block ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.project-block li + li {
+  margin-top: 5px;
+}
+
 .tags,
 .tool-cloud {
   display: flex;
@@ -548,6 +559,10 @@ button {
 }
 
 .project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
   margin-top: 25px;
 }
 

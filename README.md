@@ -34,7 +34,7 @@ portfolio/
 En `index.html`, buscá:
 
 ```html
-Agregar URL del catálogo
+Catálogo público pendiente
 ```
 
 Reemplazá el `href="#"` por la URL pública real del catálogo y quitá:
@@ -47,7 +47,7 @@ Dejalo, por ejemplo:
 
 ```html
 <a class="text-link" href="https://TU-URL" target="_blank" rel="noopener noreferrer">
-  Ver catálogo ↗
+  Ver catálogo
 </a>
 ```
 
