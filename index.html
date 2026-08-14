@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio profesional de Jesús Emanuel Funes Costa, programador junior y estudiante de Desarrollo de Software.">
+  <title>Jesús Emanuel Funes Costa | Portfolio</title>
+  <style>
+    :root{
+      --bg:#f7f4ee;
+      --paper:#fffdf9;
+      --text:#20201e;
+      --muted:#6d6861;
+      --line:#d8d2c8;
+      --accent:#806b58;
+      --max:1120px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:inherit;text-decoration:none}
+    .container{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:rgba(247,244,238,.97);border-bottom:1px solid var(--line);backdrop-filter:blur(8px)}
+    nav{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:Georgia,"Times New Roman",serif;font-size:1.2rem;font-weight:700}
+    .nav-links{display:flex;gap:22px;font-size:.9rem;color:#3f3d39}
+    .nav-links a:hover{color:var(--accent)}
+    .hero{padding:76px 0 84px;border-bottom:1px solid var(--line)}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:70px;align-items:center}
+    .overline{color:var(--accent);text-transform:uppercase;letter-spacing:.16em;font-size:.72rem;font-weight:700;margin-bottom:16px}
+    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;font-weight:500;margin:0}
+    h1{font-size:clamp(3.2rem,7vw,6.2rem);line-height:.96;letter-spacing:-.05em}
+    .role{margin-top:18px;font-size:1.15rem;color:#403d39;font-weight:700}
+    .intro{margin-top:24px;max-width:700px;color:var(--muted);font-size:1.03rem}
+    .actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+    .btn{border:1px solid var(--text);border-radius:999px;padding:11px 18px;font-size:.9rem;font-weight:700;display:inline-flex;align-items:center;justify-content:center}
+    .btn.primary{background:var(--text);color:var(--bg)}
+    .btn.secondary{border-color:var(--line)}
+    .meta{margin-top:30px;color:var(--muted);font-size:.9rem;display:flex;flex-wrap:wrap;gap:8px 20px}
+    .photo-slot{min-height:500px;background:#e9e4dc;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;position:relative;overflow:hidden}
+    .photo-slot::before{content:"";width:72%;height:72%;border:1px dashed #bdb5aa;position:absolute}
+    .photo-content{position:relative;z-index:2;max-width:250px;color:#6d6861;padding:20px}
+    .photo-content strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:1.4rem;color:#4d4842;margin-bottom:8px}
+    section{padding:86px 0;border-bottom:1px solid var(--line)}
+    .section-head{display:grid;grid-template-columns:180px 1fr;gap:35px;margin-bottom:44px}
+    .section-label{color:var(--accent);text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;padding-top:7px}
+    .section-title{font-size:clamp(2.2rem,4.5vw,4rem);line-height:1.05;letter-spacing:-.035em}
+    .section-copy{margin-top:16px;color:var(--muted);max-width:760px}
+    .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:46px}
+    .facts{border-top:1px solid var(--text)}
+    .fact{display:grid;grid-template-columns:115px 1fr;gap:14px;padding:15px 0;border-bottom:1px solid var(--line);font-size:.9rem}
+    .fact span:first-child{color:var(--muted)}
+    .about-text{font-family:Georgia,"Times New Roman",serif;font-size:1.25rem;color:#2e2b28}
+    .about-text p{margin:0 0 20px}
+    .projects{border-top:1px solid var(--text)}
+    .project{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;padding:32px 0;border-bottom:1px solid var(--line);align-items:start}
+    .project small{display:block;color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:.7rem;font-weight:700;margin-bottom:8px}
+    .project h3{font-size:1.9rem;letter-spacing:-.025em;margin-bottom:10px}
+    .project p{margin:0;color:var(--muted)}
+    .project-visual{min-height:220px;background:#ece7df;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;text-align:center;color:#807970;font-size:.85rem;padding:20px}
+    .tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:16px}
+    .tag{border:1px solid var(--line);border-radius:999px;padding:6px 9px;font-size:.72rem;color:#514d48;background:rgba(255,255,255,.28)}
+    .project-link{display:inline-block;margin-top:16px;font-size:.85rem;font-weight:700;border-bottom:1px solid var(--text);padding-bottom:2px}
+    .capabilities{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .capability{background:var(--paper);border:1px solid var(--line);padding:22px;min-height:150px}
+    .capability h3{font-size:1.25rem;margin-bottom:8px}
+    .capability p{margin:0;color:var(--muted);font-size:.92rem}
+    .experience-list{border-top:1px solid var(--text)}
+    .experience-item{display:grid;grid-template-columns:210px 1fr;gap:38px;padding:27px 0;border-bottom:1px solid var(--line)}
+    .experience-item .type{color:var(--accent);font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700}
+    .experience-item h3{font-size:1.45rem;margin-bottom:7px}
+    .experience-item p{margin:0;color:var(--muted)}
+    .tools{display:flex;flex-wrap:wrap;gap:9px}
+    .tool{padding:9px 12px;border:1px solid var(--line);background:var(--paper);font-size:.84rem}
+    .contact{background:#22211f;color:#f5f1ea;border-bottom:0}
+    .contact .section-label{color:#c5ac96}
+    .contact .section-copy{color:#bfb9b0}
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;border-top:1px solid rgba(255,255,255,.22);padding-top:26px}
+    .contact-link{display:block;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+    .contact-link span{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.13em;color:#aaa39a;margin-bottom:3px}
+    .contact-note{font-family:Georgia,"Times New Roman",serif;font-size:1.2rem;color:#d5cfc6}
+    footer{background:#22211f;color:#999187;padding:24px 0 30px;font-size:.8rem}
+    .footer{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}
+    @media(max-width:900px){
+      .hero-grid,.about-grid,.project,.contact-grid{grid-template-columns:1fr}
+      .photo-slot{min-height:420px}
+      .section-head{grid-template-columns:1fr;gap:8px}
+      .capabilities{grid-template-columns:repeat(2,1fr)}
+    }
+    @media(max-width:700px){
+      .container{width:min(var(--max),calc(100% - 26px))}
+      .nav-links{display:none}
+      .hero{padding:50px 0 60px}
+      h1{font-size:clamp(3rem,15vw,4.7rem)}
+      .capabilities{grid-template-columns:1fr}
+      .experience-item{grid-template-columns:1fr;gap:6px}
+      section{padding:65px 0}
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav>
+      <a class="brand" href="#inicio">Jesús Funes</a>
+      <div class="nav-links">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#capacidades">Capacidades</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="inicio">
+    <div class="container hero-grid">
+      <div>
+        <div class="overline">Portfolio profesional</div>
+        <h1>Jesús Emanuel Funes Costa</h1>
+        <div class="role">Programador Junior · Estudiante de Desarrollo de Software</div>
+        <p class="intro">
+          Actualmente estudio la Tecnicatura Superior en Desarrollo de Software y participo
+          en proyectos reales de sistemas, desarrollo web y soluciones digitales. Me interesa
+          seguir ganando experiencia, aprender de nuevos entornos y crecer profesionalmente
+          dentro del desarrollo de software.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#proyectos">Ver proyectos</a>
+          <a class="btn secondary" href="https://github.com/ABTJ2" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn secondary" href="mailto:jesus.funes2@gmail.com">Contacto</a>
+        </div>
+        <div class="meta">
+          <span>26 años</span>
+          <span>Caucete, San Juan, Argentina</span>
+          <span>github.com/ABTJ2</span>
+        </div>
+      </div>
+      <div class="photo-slot">
+        <div class="photo-content">
+          <strong>Espacio para foto real</strong>
+          Foto de pecho hacia arriba, fondo neutro, buena iluminación y edición mínima.
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">01 · Sobre mí</div>
+        <div><h2 class="section-title">Perfil profesional</h2></div>
+      </div>
+
+      <div class="about-grid">
+        <div class="facts">
+          <div class="fact"><span>Nombre</span><strong>Jesús Emanuel Funes Costa</strong></div>
+          <div class="fact"><span>Edad</span><strong>26 años</strong></div>
+          <div class="fact"><span>Ubicación</span><strong>Caucete, San Juan</strong></div>
+          <div class="fact"><span>Email</span><strong>jesus.funes2@gmail.com</strong></div>
+          <div class="fact"><span>Celular</span><strong>264 410-1980</strong></div>
+          <div class="fact"><span>GitHub</span><strong>ABTJ2</strong></div>
+        </div>
+
+        <div class="about-text">
+          <p>
+            Soy estudiante de la Tecnicatura Superior en Desarrollo de Software y programador junior.
+            Me encuentro desarrollando experiencia mediante proyectos reales, trabajo colaborativo y
+            soluciones digitales aplicadas a distintas necesidades.
+          </p>
+          <p>
+            Me considero una persona organizada, responsable y con iniciativa. Me gusta trabajar con
+            objetivos claros, respetar los roles dentro de los equipos y mantener una forma de trabajo
+            estructurada.
+          </p>
+          <p>
+            Cuando algo todavía no lo conozco, busco aprenderlo y adaptarme al entorno necesario.
+            Mi objetivo es seguir sumando conocimientos, experiencia y especialización dentro del
+            desarrollo de sistemas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="proyectos">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">02 · Proyectos</div>
+        <div>
+          <h2 class="section-title">Trabajo real, explicado de forma simple.</h2>
+          <p class="section-copy">
+            No todos los proyectos pueden publicarse. Cuando un sistema es privado, se muestra
+            únicamente mi participación, las tecnologías utilizadas y capturas que no expongan
+            información sensible.
+          </p>
+        </div>
+      </div>
+
+      <div class="projects">
+        <article class="project">
+          <div>
+            <small>Proyecto comercial</small>
+            <h3>BIANTI</h3>
+            <p>
+              Sistema comercial y catálogo digital con gestión de productos, stock, categorías,
+              ventas, clientes, ofertas, métricas y administración del negocio.
+            </p>
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+              <span class="tag">Supabase</span><span class="tag">PostgreSQL</span>
+            </div>
+            <a class="project-link" href="#">Agregar enlace al catálogo →</a>
+          </div>
+          <div class="project-visual">Agregar captura real del catálogo o del panel de BIANTI</div>
+        </article>
+
+        <article class="project">
+          <div>
+            <small>Proyecto privado · Trabajo en equipo</small>
+            <h3>Fitness Club</h3>
+            <p>
+              Sistema integral para la gestión de un gimnasio. Participé en análisis de requerimientos,
+              planificación por tareas, revisión de implementaciones, pruebas e integración de
+              funcionalidades como alumnos, membresías, pagos, vencimientos y sincronización.
+            </p>
+            <div class="tags">
+              <span class="tag">C#</span><span class="tag">ASP.NET Core</span><span class="tag">SQLite</span>
+              <span class="tag">Supabase</span><span class="tag">Git</span>
+            </div>
+          </div>
+          <div class="project-visual">
+            Proyecto privado<br>
+            Se puede colocar una captura anonimizada si está permitido
+          </div>
+        </article>
+
+        <article class="project">
+          <div>
+            <small>Proyecto empresarial · Backend</small>
+            <h3>Sistema de gestión ganadera</h3>
+            <p>
+              Participación en un proyecto backend colaborativo realizando análisis de requerimientos,
+              seguimiento de tareas, revisión de funcionalidades, validación de criterios de aceptación
+              y pruebas.
+            </p>
+            <div class="tags">
+              <span class="tag">PHP</span><span class="tag">Laravel</span><span class="tag">APIs</span>
+              <span class="tag">Git</span><span class="tag">GitHub</span>
+            </div>
+          </div>
+          <div class="project-visual">
+            Proyecto privado / empresarial<br>
+            No publicar información interna
+          </div>
+        </article>
+
+        <article class="project">
+          <div>
+            <small>Trabajos independientes</small>
+            <h3>Sitios web y tarjetas digitales</h3>
+            <p>
+              Desarrollo de pequeñas páginas, landing pages, sitios informativos y piezas digitales
+              creadas según las necesidades de distintas personas y emprendimientos.
+            </p>
+            <div class="tags">
+              <span class="tag">Web</span><span class="tag">Responsive</span><span class="tag">Diseño</span><span class="tag">Clientes</span>
+            </div>
+          </div>
+          <div class="project-visual">Agregar 1 o 2 capturas de trabajos reales</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiencia">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">03 · Experiencia</div>
+        <div><h2 class="section-title">Experiencia que también suma al desarrollo.</h2></div>
+      </div>
+
+      <div class="experience-list">
+        <div class="experience-item">
+          <div class="type">Desarrollo</div>
+          <div>
+            <h3>Proyectos de software</h3>
+            <p>
+              Experiencia práctica trabajando en sistemas y proyectos colaborativos, utilizando Git,
+              herramientas de IA, revisión de tareas, pruebas y organización del desarrollo.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="type">Operación y logística</div>
+          <div>
+            <h3>Operador de remisera</h3>
+            <p>
+              Coordinación de viajes, atención al público, organización de prioridades, comunicación
+              entre clientes y conductores y resolución de situaciones bajo presión.
+            </p>
+          </div>
+        </div>
+
+        <div class="experience-item">
+          <div class="type">Comercial</div>
+          <div>
+            <h3>Ventas, atención y marketing digital</h3>
+            <p>
+              Experiencia en asesoramiento, ventas, comunicación con clientes y promoción de productos
+              mediante contenido y acciones digitales.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="capacidades">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">04 · Capacidades</div>
+        <div><h2 class="section-title">Cómo trabajo</h2></div>
+      </div>
+
+      <div class="capabilities">
+        <div class="capability"><h3>Organización</h3><p>Trabajo con objetivos claros, tareas ordenadas y una estructura definida.</p></div>
+        <div class="capability"><h3>Iniciativa</h3><p>Busco soluciones y aprendo lo necesario cuando encuentro algo nuevo.</p></div>
+        <div class="capability"><h3>Adaptabilidad</h3><p>Me adapto a nuevas herramientas, tecnologías, equipos y entornos de trabajo.</p></div>
+        <div class="capability"><h3>Trabajo en equipo</h3><p>Valoro la comunicación, la colaboración y el respeto por los roles.</p></div>
+        <div class="capability"><h3>Resolución</h3><p>Analizo problemas, organizo prioridades y busco soluciones prácticas.</p></div>
+        <div class="capability"><h3>Aprendizaje continuo</h3><p>Busco incorporar conocimientos y experiencia en cada proyecto.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">05 · Herramientas</div>
+        <div>
+          <h2 class="section-title">Tecnología y desarrollo asistido por IA</h2>
+          <p class="section-copy">
+            Trabajo con diferentes tecnologías según las necesidades del proyecto. Mi nivel varía
+            entre herramientas y continúo profundizando mis conocimientos técnicos.
+          </p>
+        </div>
+      </div>
+
+      <div class="tools">
+        <span class="tool">Git</span><span class="tool">GitHub</span><span class="tool">Codex</span>
+        <span class="tool">Agentes de IA</span><span class="tool">Skills</span><span class="tool">Prompts técnicos</span>
+        <span class="tool">HTML</span><span class="tool">CSS</span><span class="tool">JavaScript</span>
+        <span class="tool">C#</span><span class="tool">ASP.NET Core</span><span class="tool">PHP</span>
+        <span class="tool">Laravel</span><span class="tool">SQLite</span><span class="tool">PostgreSQL</span>
+        <span class="tool">Supabase</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contacto">
+    <div class="container">
+      <div class="section-head">
+        <div class="section-label">06 · Contacto</div>
+        <div>
+          <h2 class="section-title">Contacto profesional</h2>
+          <p class="section-copy">
+            Busco seguir aprendiendo, adquirir experiencia y participar en nuevos proyectos
+            de desarrollo de software.
+          </p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div>
+          <a class="contact-link" href="mailto:jesus.funes2@gmail.com">
+            <span>Email</span>jesus.funes2@gmail.com
+          </a>
+          <a class="contact-link" href="tel:+542644101980">
+            <span>Celular</span>+54 264 410-1980
+          </a>
+          <a class="contact-link" href="https://github.com/ABTJ2" target="_blank" rel="noopener">
+            <span>GitHub</span>github.com/ABTJ2
+          </a>
+          <div class="contact-link">
+            <span>LinkedIn</span>Agregar cuando esté creado
+          </div>
+        </div>
+
+        <div class="contact-note">
+          Jesús Emanuel Funes Costa<br>
+          Programador Junior<br>
+          Estudiante de Desarrollo de Software<br><br>
+          Caucete, San Juan, Argentina
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <span>© 2026 Jesús Emanuel Funes Costa</span>
+    <span>Portfolio profesional</span>
+  </div>
+</footer>
+</body>
+</html>
