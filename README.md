@@ -31,25 +31,14 @@ portfolio/
 ## Antes de publicar la versión definitiva
 
 ### 1. BIANTI
-En `index.html`, buscá:
+BIANTI tiene un único CTA público, "Ver catálogo", que apunta a la URL pública real:
 
-```html
-Catálogo público pendiente
+```text
+https://bianti-indumentaria.pages.dev/
 ```
 
-Reemplazá el `href="#"` por la URL pública real del catálogo y quitá:
-
-```html
-class="text-link disabled" aria-disabled="true"
-```
-
-Dejalo, por ejemplo:
-
-```html
-<a class="text-link" href="https://TU-URL" target="_blank" rel="noopener noreferrer">
-  Ver catálogo
-</a>
-```
+Ese enlace usa `target="_blank"` y `rel="noopener noreferrer"`. No agregar enlaces
+duplicados ni mostrar repositorios privados o paneles administrativos.
 
 ### 2. Capturas de proyectos
 Podés reemplazar los SVG de `assets/images/` por capturas reales.

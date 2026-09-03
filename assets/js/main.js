@@ -90,9 +90,4 @@
 
     sections.forEach((section) => sectionObserver.observe(section));
   }
-
-  // Prevent placeholder project links from jumping to top.
-  document.querySelectorAll('a[aria-disabled="true"]').forEach((link) => {
-    link.addEventListener("click", (event) => event.preventDefault());
-  });
 })();
