@@ -13,13 +13,22 @@ portfolio/
 │   │   └── styles.css
 │   ├── js/
 │   │   └── main.js
-│   └── images/
-│       ├── jesus-funes.jpg
-│       ├── bianti-placeholder.svg
-│       ├── fitness-placeholder.svg
-│       ├── ganado-placeholder.svg
-│       └── web-placeholder.svg
+│   ├── images/
+│   │   ├── jesus-funes.jpg
+│   │   ├── bianti-placeholder.svg
+│   │   ├── fitness-placeholder.svg
+│   │   ├── ganado-placeholder.svg
+│   │   └── web-placeholder.svg
+│   └── docs/
+│       └── certificado-desarrollo-ia-jesus-funes.pdf (copiar el original)
 ```
+
+## Formación complementaria
+
+La sección "Formación complementaria" presenta la jornada **Desarrollo con IA: de 0 a Producción**
+de BIG school (6 horas, septiembre de 2026). El botón "Ver certificado" apunta a
+`assets/docs/certificado-desarrollo-ia-jesus-funes.pdf`. El PDF original no está incluido:
+copialo manualmente a esa ruta, sin modificar su contenido, para habilitar el enlace.
 
 ## Enlaces ya configurados
 
