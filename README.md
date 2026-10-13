@@ -39,7 +39,7 @@ Cada formación incluye un botón "Ver certificado" que abre su PDF original en 
 ## Enlaces ya configurados
 
 - GitHub: https://github.com/ABTJ2
-- LinkedIn: https://www.linkedin.com/in/jesus-funes-02b1a942a/
+- LinkedIn: https://www.linkedin.com/in/jesusfunes99/
 - Email: jesus.funes2@gmail.com
 - Celular: +54 264 410-1980
 
