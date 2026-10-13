@@ -6,6 +6,8 @@
   <meta name="description" content="Portfolio profesional de Jesús Emanuel Funes Costa, programador junior y estudiante de Desarrollo de Software.">
   <meta name="author" content="Jesús Emanuel Funes Costa">
   <meta name="theme-color" content="#f4efe7">
+  <link rel="alternate" hreflang="es" href="?lang=es">
+  <link rel="alternate" hreflang="en" href="?lang=en">
 
   <title>Jesús Funes — Programador Junior</title>
 
@@ -24,24 +26,29 @@
 
   <header class="site-header" id="top">
     <div class="container nav-shell">
-      <a class="brand" href="#inicio" aria-label="Ir al inicio">
+      <a class="brand" href="#inicio" aria-label="Ir al inicio" data-i18n-aria-label="brandHome">
         <span class="brand-mark">JF</span>
         <span class="brand-name">Jesús Funes</span>
       </a>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false" data-i18n-aria-label="menuOpen">
         <span></span>
         <span></span>
       </button>
 
-      <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#capacidades">Capacidades</a>
-        <a href="#herramientas">Herramientas</a>
-        <a href="#contacto">Contacto</a>
+      <nav class="main-nav" id="mainNav" aria-label="Navegación principal" data-i18n-aria-label="mainNavigation">
+        <a href="#sobre-mi" data-i18n="aboutNav">Sobre mí</a>
+        <a href="#proyectos" data-i18n="projectsNav">Proyectos</a>
+        <a href="#experiencia" data-i18n="experienceNav">Experiencia</a>
+        <a href="#capacidades" data-i18n="capabilitiesNav">Capacidades</a>
+        <a href="#herramientas" data-i18n="toolsNav">Herramientas</a>
+        <a href="#contacto" data-i18n="contactNav">Contacto</a>
       </nav>
+      <div class="language-switch" role="group" aria-label="Seleccionar idioma" data-i18n-aria-label="languageSelection">
+        <button type="button" data-lang="es" lang="es" aria-label="Español" aria-pressed="true">ES</button>
+        <span aria-hidden="true">|</span>
+        <button type="button" data-lang="en" lang="en" aria-label="English" aria-pressed="false">EN</button>
+      </div>
     </div>
   </header>
 
@@ -49,20 +56,20 @@
     <section class="hero section" id="inicio">
       <div class="container hero-grid">
         <div class="hero-copy reveal">
-          <p class="eyebrow">Portfolio profesional · 2026</p>
+          <p class="eyebrow" data-i18n="heroEyebrow">Portfolio profesional · 2026</p>
 
           <h1>Jesús Emanuel<br>Funes Costa</h1>
 
-          <p class="hero-role">Programador Junior · Estudiante de Desarrollo de Software</p>
+          <p class="hero-role" data-i18n="heroRole">Programador Junior · Estudiante de Desarrollo de Software</p>
 
-          <p class="hero-intro">
+          <p class="hero-intro" data-i18n="heroIntro">
             Participo en proyectos reales de software, sistemas de gestión y desarrollo web.
             Me interesa seguir creciendo profesionalmente, sumar experiencia y profundizar
             mis conocimientos dentro del desarrollo de sistemas.
           </p>
 
           <div class="hero-actions">
-            <a class="button button-dark" href="#proyectos">Ver proyectos</a>
+            <a class="button button-dark" href="#proyectos" data-i18n="viewProjects">Ver proyectos</a>
             <a class="button button-light" href="https://github.com/ABTJ2" target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
@@ -72,25 +79,25 @@
           </div>
 
           <div class="hero-meta">
-            <span>26 años</span>
+            <span data-i18n="age">26 años</span>
             <span>Caucete, San Juan, Argentina</span>
           </div>
         </div>
 
         <div class="portrait-card reveal reveal-delay">
           <div class="portrait-label">
-            <span>Perfil</span>
-            <span>Junior Developer</span>
+            <span data-i18n="profile">Perfil</span>
+            <span data-i18n="portraitRole">Junior Developer</span>
           </div>
 
           <div class="portrait-frame">
-            <img src="assets/images/jesus-funes.jpg" alt="Retrato profesional de Jesús Emanuel Funes Costa">
+            <img src="assets/images/jesus-funes.jpg" alt="Retrato profesional de Jesús Emanuel Funes Costa" data-i18n-alt="portraitAlt">
           </div>
 
           <div class="portrait-footer">
-            <span>Desarrollo</span>
-            <span>IA aplicada</span>
-            <span>Trabajo colaborativo</span>
+            <span data-i18n="development">Desarrollo</span>
+            <span data-i18n="appliedAI">IA aplicada</span>
+            <span data-i18n="collaboration">Trabajo colaborativo</span>
           </div>
         </div>
       </div>
@@ -101,19 +108,19 @@
         <div class="section-heading reveal">
           <span class="section-index">01</span>
           <div>
-            <p class="eyebrow">Sobre mí</p>
-            <h2>Un perfil en formación, con experiencia práctica.</h2>
+            <p class="eyebrow" data-i18n="aboutNav">Sobre mí</p>
+            <h2 data-i18n="aboutHeading">Un perfil en formación, con experiencia práctica.</h2>
           </div>
         </div>
 
         <div class="about-layout">
           <aside class="profile-facts reveal">
             <div>
-              <span>Nombre</span>
+              <span data-i18n="name">Nombre</span>
               <strong>Jesús Emanuel Funes Costa</strong>
             </div>
             <div>
-              <span>Ubicación</span>
+              <span data-i18n="location">Ubicación</span>
               <strong>Caucete, San Juan</strong>
             </div>
             <div>
@@ -121,7 +128,7 @@
               <a href="mailto:jesus.funes2@gmail.com">jesus.funes2@gmail.com</a>
             </div>
             <div>
-              <span>Celular</span>
+              <span data-i18n="phone">Celular</span>
               <a href="tel:+542644101980">+54 264 410-1980</a>
             </div>
             <div>
@@ -130,28 +137,28 @@
             </div>
             <div>
               <span>LinkedIn</span>
-              <a href="https://www.linkedin.com/in/jesus-funes-02b1a942a/" target="_blank" rel="noopener noreferrer">Ver perfil ↗</a>
+              <a href="https://www.linkedin.com/in/jesus-funes-02b1a942a/" target="_blank" rel="noopener noreferrer" data-i18n="viewProfile">Ver perfil ↗</a>
             </div>
           </aside>
 
           <div class="about-copy reveal">
-            <p class="lead">
+            <p class="lead" data-i18n="aboutLead">
               Soy estudiante de la Tecnicatura Superior en Desarrollo de Software y programador junior.
               Actualmente desarrollo experiencia mediante proyectos reales, tanto personales como colaborativos.
             </p>
 
-            <p>
+            <p data-i18n="aboutOrganization">
               Me considero una persona organizada, responsable y con iniciativa. Me gusta trabajar con objetivos
               claros, mantener las tareas estructuradas y comprender qué problema busca resolver cada proyecto.
             </p>
 
-            <p>
+            <p data-i18n="aboutLearning">
               Me adapto a nuevas herramientas y entornos de trabajo. Cuando algo todavía no lo conozco,
               busco aprenderlo, analizarlo y encontrar una forma concreta de avanzar. También valoro la comunicación,
               el trabajo en equipo y el respeto por los roles y responsabilidades.
             </p>
 
-            <p>
+            <p data-i18n="aboutGoal">
               Mi objetivo es seguir sumando conocimientos y experiencia para crecer profesionalmente
               y especializarme progresivamente dentro del desarrollo de software.
             </p>
@@ -165,9 +172,9 @@
         <div class="section-heading reveal">
           <span class="section-index">02</span>
           <div>
-            <p class="eyebrow">Proyectos</p>
-            <h2>Proyectos en los que participé</h2>
-            <p class="section-subcopy">
+            <p class="eyebrow" data-i18n="projectsNav">Proyectos</p>
+            <h2 data-i18n="projectsHeading">Proyectos en los que participé</h2>
+            <p class="section-subcopy" data-i18n="projectsIntro">
               Una selección de proyectos y sistemas en los que participé, aportando en distintas etapas como
               análisis, organización, desarrollo, revisión, pruebas y seguimiento.
             </p>
@@ -177,33 +184,33 @@
         <div class="project-list">
           <article class="project-card reveal">
             <div class="project-media">
-              <img src="assets/images/bianti-placeholder.svg" alt="Espacio para captura del proyecto BIANTI">
+              <img src="assets/images/bianti-placeholder.svg" alt="Espacio para captura del proyecto BIANTI" data-i18n-alt="biantiAlt" data-i18n-src="biantiImage">
             </div>
 
             <div class="project-content">
               <div class="project-topline">
-                <span>Sistema de gestión comercial y catálogo digital</span>
+                <span data-i18n="biantiType">Sistema de gestión comercial y catálogo digital</span>
                 <span>01</span>
               </div>
 
               <h3>BIANTI</h3>
 
-              <p>
+              <p data-i18n="biantiDescription">
                 Proyecto desarrollado para acompañar la gestión de un emprendimiento comercial. El sistema reúne
                 herramientas para productos, categorías, stock, precios, ventas, pedidos, clientes, ofertas y otras
                 tareas administrativas.
               </p>
 
               <div class="project-block">
-                <h4>Mi aporte</h4>
-                <p>
+                <h4 data-i18n="myContribution">Mi aporte</h4>
+                <p data-i18n="biantiContribution">
                   Participé en el análisis de las necesidades del negocio, definición de funcionalidades,
                   organización del desarrollo, revisión de interfaces, pruebas, detección de errores y mejoras del
                   sistema.
                 </p>
               </div>
 
-              <div class="tags" aria-label="Tecnologías de BIANTI">
+              <div class="tags" aria-label="Tecnologías de BIANTI" data-i18n-aria-label="biantiTech">
                 <span>HTML</span>
                 <span>CSS</span>
                 <span>JavaScript</span>
@@ -213,40 +220,40 @@
               </div>
 
               <div class="project-actions">
-                <a class="text-link" href="https://bianti-indumentaria.pages.dev/" target="_blank" rel="noopener noreferrer">Ver catálogo</a>
+                <a class="text-link" href="https://bianti-indumentaria.pages.dev/" target="_blank" rel="noopener noreferrer" data-i18n="viewCatalog">Ver catálogo</a>
               </div>
             </div>
           </article>
 
           <article class="project-card project-card-reverse reveal">
             <div class="project-media">
-              <img src="assets/images/fitness-placeholder.svg" alt="Espacio para captura anonimizada del proyecto Fitness Club">
+              <img src="assets/images/fitness-placeholder.svg" alt="Espacio para captura anonimizada del proyecto Fitness Club" data-i18n-alt="fitnessAlt" data-i18n-src="fitnessImage">
             </div>
 
             <div class="project-content">
               <div class="project-topline">
-                <span>Sistema de gestión para gimnasio</span>
+                <span data-i18n="fitnessType">Sistema de gestión para gimnasio</span>
                 <span>02</span>
               </div>
 
               <h3>Fitness Club</h3>
 
-              <p>
+              <p data-i18n="fitnessDescription">
                 Proyecto desarrollado en equipo para digitalizar diferentes tareas de la gestión diaria de un
                 gimnasio, incluyendo alumnos, membresías, vencimientos, pagos, caja, usuarios y sincronización de
                 información.
               </p>
 
               <div class="project-block">
-                <h4>Mi aporte</h4>
-                <p>
+                <h4 data-i18n="myContribution">Mi aporte</h4>
+                <p data-i18n="fitnessContribution">
                   Participé en la organización y seguimiento del proyecto, análisis de requerimientos, división del
                   trabajo en tareas, revisión de implementaciones, pruebas, seguimiento de correcciones e integración
                   de funcionalidades.
                 </p>
               </div>
 
-              <div class="tags" aria-label="Tecnologías de Fitness Club">
+              <div class="tags" aria-label="Tecnologías de Fitness Club" data-i18n-aria-label="fitnessTech">
                 <span>C#</span>
                 <span>.NET</span>
                 <span>ASP.NET Core</span>
@@ -257,37 +264,37 @@
               </div>
 
               <div class="project-actions">
-                <span class="privacy-pill">Proyecto privado</span>
+                <span class="privacy-pill" data-i18n="privateProject">Proyecto privado</span>
               </div>
             </div>
           </article>
 
           <article class="project-card reveal">
             <div class="project-media">
-              <img src="assets/images/ganado-placeholder.svg" alt="Espacio para proyecto de gestión ganadera">
+              <img src="assets/images/ganado-placeholder.svg" alt="Espacio para proyecto de gestión ganadera" data-i18n-alt="livestockAlt" data-i18n-src="livestockImage">
             </div>
 
             <div class="project-content">
               <div class="project-topline">
-                <span>Proyecto empresarial · Backend</span>
+                <span data-i18n="livestockType">Proyecto empresarial · Backend</span>
                 <span>03</span>
               </div>
 
-              <h3>Sistema de gestión ganadera</h3>
+              <h3 data-i18n="livestockName">Sistema de gestión ganadera</h3>
 
-              <p>
+              <p data-i18n="livestockDescription">
                 Proyecto de software orientado a la gestión de información relacionada con la actividad ganadera.
               </p>
 
               <div class="project-block">
-                <h4>Mi aporte</h4>
-                <p>
+                <h4 data-i18n="myContribution">Mi aporte</h4>
+                <p data-i18n="livestockContribution">
                   Participé en el análisis de requerimientos, organización y seguimiento de tareas, revisión de
                   funcionalidades, validación de criterios de aceptación, pruebas y seguimiento de correcciones.
                 </p>
               </div>
 
-              <div class="tags" aria-label="Tecnologías del sistema ganadero">
+              <div class="tags" aria-label="Tecnologías del sistema ganadero" data-i18n-aria-label="livestockTech">
                 <span>PHP</span>
                 <span>Laravel</span>
                 <span>APIs</span>
@@ -296,44 +303,44 @@
               </div>
 
               <div class="project-actions">
-                <span class="privacy-pill">Proyecto empresarial / privado</span>
+                <span class="privacy-pill" data-i18n="businessPrivate">Proyecto empresarial / privado</span>
               </div>
             </div>
           </article>
 
           <article class="project-card project-card-reverse reveal">
             <div class="project-media">
-              <img src="assets/images/web-placeholder.svg" alt="Espacio para otros proyectos web">
+              <img src="assets/images/web-placeholder.svg" alt="Espacio para otros proyectos web" data-i18n-alt="webAlt" data-i18n-src="webImage">
             </div>
 
             <div class="project-content">
               <div class="project-topline">
-                <span>Trabajos independientes</span>
+                <span data-i18n="freelanceType">Trabajos independientes</span>
                 <span>04</span>
               </div>
 
-              <h3>Sitios web y trabajos independientes</h3>
+              <h3 data-i18n="freelanceHeading">Sitios web y trabajos independientes</h3>
 
-              <p>
+              <p data-i18n="freelanceDescription">
                 Además de los proyectos principales, realicé páginas web, sitios informativos, landing pages y
                 tarjetas digitales para distintas necesidades.
               </p>
 
               <div class="project-block">
-                <h4>Qué trabajé</h4>
+                <h4 data-i18n="workCovered">Qué trabajé</h4>
                 <ul>
-                  <li>Adaptación a dispositivos móviles.</li>
-                  <li>Organización de contenido.</li>
-                  <li>Diseño de interfaces simples.</li>
-                  <li>Interpretación de necesidades del cliente.</li>
-                  <li>Implementación y ajustes del sitio.</li>
+                  <li data-i18n="freelanceMobile">Adaptación a dispositivos móviles.</li>
+                  <li data-i18n="freelanceContent">Organización de contenido.</li>
+                  <li data-i18n="freelanceDesign">Diseño de interfaces simples.</li>
+                  <li data-i18n="freelanceNeeds">Interpretación de necesidades del cliente.</li>
+                  <li data-i18n="freelanceImplementation">Implementación y ajustes del sitio.</li>
                 </ul>
               </div>
 
-              <div class="tags" aria-label="Áreas de otros proyectos web">
+              <div class="tags" aria-label="Áreas de otros proyectos web" data-i18n-aria-label="webAreas">
                 <span>Web</span>
                 <span>Responsive</span>
-                <span>Diseño</span>
+                <span data-i18n="design">Diseño</span>
                 <span>Landing pages</span>
               </div>
             </div>
@@ -347,8 +354,8 @@
         <div class="section-heading reveal">
           <span class="section-index">03</span>
           <div>
-            <p class="eyebrow">Experiencia</p>
-            <h2>Experiencias que también aportan al trabajo en software.</h2>
+            <p class="eyebrow" data-i18n="experienceNav">Experiencia</p>
+            <h2 data-i18n="experienceHeading">Experiencias que también aportan al trabajo en software.</h2>
           </div>
         </div>
 
@@ -356,9 +363,9 @@
           <article class="experience-item reveal">
             <span class="experience-number">01</span>
             <div>
-              <p class="experience-label">Desarrollo</p>
-              <h3>Proyectos de software</h3>
-              <p>
+              <p class="experience-label" data-i18n="development">Desarrollo</p>
+              <h3 data-i18n="softwareProjects">Proyectos de software</h3>
+              <p data-i18n="softwareExperience">
                 Trabajo práctico en sistemas y proyectos colaborativos utilizando Git,
                 herramientas de IA, revisión de tareas, pruebas y organización del desarrollo.
               </p>
@@ -368,9 +375,9 @@
           <article class="experience-item reveal">
             <span class="experience-number">02</span>
             <div>
-              <p class="experience-label">Operación y logística</p>
-              <h3>Operador de remisera</h3>
-              <p>
+              <p class="experience-label" data-i18n="operations">Operación y logística</p>
+              <h3 data-i18n="dispatcher">Operador de remisera</h3>
+              <p data-i18n="dispatcherDescription">
                 Coordinación de viajes, atención al público, organización de prioridades,
                 comunicación entre clientes y conductores y resolución de situaciones en tiempo real.
               </p>
@@ -380,9 +387,9 @@
           <article class="experience-item reveal">
             <span class="experience-number">03</span>
             <div>
-              <p class="experience-label">Comercial</p>
-              <h3>Ventas y atención al cliente</h3>
-              <p>
+              <p class="experience-label" data-i18n="commercial">Comercial</p>
+              <h3 data-i18n="sales">Ventas y atención al cliente</h3>
+              <p data-i18n="salesDescription">
                 Experiencia en asesoramiento, ventas, comunicación comercial y trato con diferentes perfiles de clientes.
               </p>
             </div>
@@ -391,9 +398,9 @@
           <article class="experience-item reveal">
             <span class="experience-number">04</span>
             <div>
-              <p class="experience-label">Comunicación</p>
-              <h3>Marketing digital</h3>
-              <p>
+              <p class="experience-label" data-i18n="communication">Comunicación</p>
+              <h3 data-i18n="digitalMarketing">Marketing digital</h3>
+              <p data-i18n="marketingDescription">
                 Conocimientos prácticos de promoción de productos, publicaciones para redes sociales,
                 contenido comercial y acciones orientadas a generar interacción y ventas.
               </p>
@@ -408,46 +415,46 @@
         <div class="section-heading reveal">
           <span class="section-index">04</span>
           <div>
-            <p class="eyebrow">Capacidades</p>
-            <h2>Cómo trabajo.</h2>
+            <p class="eyebrow" data-i18n="capabilitiesNav">Capacidades</p>
+            <h2 data-i18n="capabilitiesHeading">Cómo trabajo.</h2>
           </div>
         </div>
 
         <div class="capability-grid">
           <article class="capability-card reveal">
             <span>01</span>
-            <h3>Organización</h3>
-            <p>Trabajo mejor con objetivos claros, tareas ordenadas y una estructura definida.</p>
+            <h3 data-i18n="organization">Organización</h3>
+            <p data-i18n="organizationDescription">Trabajo mejor con objetivos claros, tareas ordenadas y una estructura definida.</p>
           </article>
 
           <article class="capability-card reveal">
             <span>02</span>
-            <h3>Iniciativa</h3>
-            <p>Cuando encuentro algo nuevo, investigo, pruebo alternativas y busco una forma concreta de avanzar.</p>
+            <h3 data-i18n="initiative">Iniciativa</h3>
+            <p data-i18n="initiativeDescription">Cuando encuentro algo nuevo, investigo, pruebo alternativas y busco una forma concreta de avanzar.</p>
           </article>
 
           <article class="capability-card reveal">
             <span>03</span>
-            <h3>Adaptabilidad</h3>
-            <p>Me adapto a nuevas herramientas, tecnologías, equipos y formas de trabajo.</p>
+            <h3 data-i18n="adaptability">Adaptabilidad</h3>
+            <p data-i18n="adaptabilityDescription">Me adapto a nuevas herramientas, tecnologías, equipos y formas de trabajo.</p>
           </article>
 
           <article class="capability-card reveal">
             <span>04</span>
-            <h3>Trabajo en equipo</h3>
-            <p>Valoro la comunicación, la colaboración y el respeto por los roles y responsabilidades.</p>
+            <h3 data-i18n="teamwork">Trabajo en equipo</h3>
+            <p data-i18n="teamworkDescription">Valoro la comunicación, la colaboración y el respeto por los roles y responsabilidades.</p>
           </article>
 
           <article class="capability-card reveal">
             <span>05</span>
-            <h3>Resolución</h3>
-            <p>Analizo problemas, ordeno prioridades y busco soluciones prácticas para poder avanzar.</p>
+            <h3 data-i18n="problemSolving">Resolución</h3>
+            <p data-i18n="problemSolvingDescription">Analizo problemas, ordeno prioridades y busco soluciones prácticas para poder avanzar.</p>
           </article>
 
           <article class="capability-card reveal">
             <span>06</span>
-            <h3>Aprendizaje continuo</h3>
-            <p>Busco incorporar conocimientos y experiencia en cada proyecto en el que participo.</p>
+            <h3 data-i18n="continuousLearning">Aprendizaje continuo</h3>
+            <p data-i18n="continuousLearningDescription">Busco incorporar conocimientos y experiencia en cada proyecto en el que participo.</p>
           </article>
         </div>
       </div>
@@ -458,9 +465,9 @@
         <div class="section-heading reveal">
           <span class="section-index">05</span>
           <div>
-            <p class="eyebrow">Herramientas</p>
-            <h2>Tecnologías con las que he trabajado.</h2>
-            <p class="section-subcopy">
+            <p class="eyebrow" data-i18n="toolsNav">Herramientas</p>
+            <h2 data-i18n="toolsHeading">Tecnologías con las que he trabajado.</h2>
+            <p class="section-subcopy" data-i18n="toolsIntro">
               Mi nivel varía entre herramientas y continúo profundizando mi formación técnica.
               No presento esta lista como dominio avanzado de todas ellas.
             </p>
@@ -469,7 +476,7 @@
 
         <div class="tools-layout">
           <article class="tool-group reveal">
-            <p class="tool-kicker">Desarrollo</p>
+            <p class="tool-kicker" data-i18n="development">Desarrollo</p>
             <div class="tool-cloud">
               <span>C#</span>
               <span>.NET</span>
@@ -484,7 +491,7 @@
           </article>
 
           <article class="tool-group reveal">
-            <p class="tool-kicker">Datos y plataformas</p>
+            <p class="tool-kicker" data-i18n="dataPlatforms">Datos y plataformas</p>
             <div class="tool-cloud">
               <span>SQLite</span>
               <span>PostgreSQL</span>
@@ -496,8 +503,8 @@
           </article>
 
           <article class="tool-group tool-group-wide reveal">
-            <p class="tool-kicker">Desarrollo asistido por Inteligencia Artificial</p>
-            <p class="tool-copy">
+            <p class="tool-kicker" data-i18n="aiDevelopment">Desarrollo asistido por Inteligencia Artificial</p>
+            <p class="tool-copy" data-i18n="aiWorkflow">
               Integro herramientas de Inteligencia Artificial dentro de mi flujo de desarrollo para
               analizar requerimientos, organizar tareas, trabajar sobre código existente, implementar
               funcionalidades, revisar resultados, detectar errores, validar cambios y documentar el
@@ -506,11 +513,11 @@
 
             <div class="tool-cloud">
               <span>Codex</span>
-              <span>Agentes de IA</span>
+              <span data-i18n="aiAgents">Agentes de IA</span>
               <span>Skills</span>
             </div>
 
-            <p class="tool-note">
+            <p class="tool-note" data-i18n="aiNote">
               La IA funciona como una herramienta de apoyo dentro del proceso; el análisis, la
               organización, la revisión y la validación forman parte de mi trabajo.
             </p>
@@ -524,9 +531,9 @@
         <div class="section-heading reveal">
           <span class="section-index">06</span>
           <div>
-            <p class="eyebrow">Formación</p>
+            <p class="eyebrow" data-i18n="education">Formación</p>
             <h2>Tecnicatura Superior en Desarrollo de Software</h2>
-            <p class="section-subcopy">En curso.</p>
+            <p class="section-subcopy" data-i18n="inProgress">En curso.</p>
           </div>
         </div>
       </div>
@@ -537,8 +544,8 @@
         <div class="section-heading reveal">
           <span class="section-index">07</span>
           <div>
-            <p class="eyebrow">Aprendizaje continuo</p>
-            <h2>Formación complementaria</h2>
+            <p class="eyebrow" data-i18n="continuousLearning">Aprendizaje continuo</p>
+            <h2 data-i18n="additionalEducation">Formación complementaria</h2>
           </div>
         </div>
 
@@ -546,14 +553,14 @@
           <div>
             <h3>Desarrollo con IA: de 0 a Producción</h3>
             <p class="formation-institution">BIG school</p>
-            <p class="formation-details">6 horas · Septiembre 2026</p>
+            <p class="formation-details" data-i18n="courseDetails">6 horas · Septiembre 2026</p>
             <p class="formation-certificate">Certificado de Iniciación al Desarrollo con IA</p>
-            <p class="formation-description">
+            <p class="formation-description" data-i18n="courseDescription">
               Jornada formativa orientada al desarrollo de software con apoyo de Inteligencia Artificial,
               desde el análisis y la construcción hasta el proceso de puesta en producción.
             </p>
           </div>
-          <a class="button button-light" href="assets/docs/certificado-desarrollo-ia-jesus-funes.pdf" target="_blank" rel="noopener noreferrer">Ver certificado</a>
+          <a class="button button-light" href="assets/docs/certificado-desarrollo-ia-jesus-funes.pdf" target="_blank" rel="noopener noreferrer" data-i18n="viewCertificate">Ver certificado</a>
         </article>
       </div>
     </section>
@@ -561,9 +568,9 @@
     <section class="contact-section" id="contacto">
       <div class="container contact-grid">
         <div class="contact-intro reveal">
-          <p class="eyebrow eyebrow-light">Contacto</p>
-          <h2>Estoy construyendo experiencia. Quiero seguir creciendo.</h2>
-          <p>
+          <p class="eyebrow eyebrow-light" data-i18n="contactNav">Contacto</p>
+          <h2 data-i18n="contactHeading">Estoy construyendo experiencia. Quiero seguir creciendo.</h2>
+          <p data-i18n="contactIntro">
             Me interesa participar en proyectos donde pueda aprender, asumir responsabilidades
             y continuar desarrollándome profesionalmente.
           </p>
@@ -577,7 +584,7 @@
           </a>
 
           <a href="https://wa.me/542644101980?text=Hola%20Jes%C3%BAs%2C%20me%20interes%C3%B3%20tu%20C.V." target="_blank" rel="noopener noreferrer">
-            <span>Celular</span>
+            <span data-i18n="phone">Celular</span>
             <strong>+54 264 410-1980</strong>
             <b>↗</b>
           </a>
@@ -604,18 +611,18 @@
         <span class="footer-mark">JF</span>
         <div>
           <strong>Jesús Emanuel Funes Costa</strong>
-          <span>Programador Junior · San Juan, Argentina</span>
+          <span data-i18n="footerRole">Programador Junior · San Juan, Argentina</span>
         </div>
       </div>
 
       <div class="footer-nav">
-        <a href="#top">Volver arriba ↑</a>
+        <a href="#top" data-i18n="backToTop">Volver arriba ↑</a>
         <a href="https://github.com/ABTJ2" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/jesus-funes-02b1a942a/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
 
       <p class="footer-note">
-        Portfolio personal · <span id="year"></span>
+        <span data-i18n="personalPortfolio">Portfolio personal · </span><span id="year"></span>
       </p>
     </div>
   </footer>
