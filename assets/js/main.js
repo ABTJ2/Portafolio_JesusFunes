@@ -104,8 +104,8 @@
     education: "Education",
     inProgress: "Higher technical degree in software development · In progress.",
     additionalEducation: "Additional training",
-    courseDetails: "6 hours · September 2026",
-    courseDescription: "A training session on AI-assisted software development, from analysis and implementation through to deployment.",
+    courseDetails: "6 hours · September 29, 2026",
+    secondCourseDetails: "4 hours · October 2, 2026",
     viewCertificate: "View certificate",
     contactHeading: "I'm building experience and ready to keep growing.",
     contactIntro: "I'm interested in projects where I can learn, take responsibility, and continue developing professionally.",
@@ -130,7 +130,6 @@
     description: document.querySelector('meta[name="description"]').content
   };
   const languageButtons = [...document.querySelectorAll(".language-switch button")];
-  const languageGroup = document.querySelector(".language-switch");
   const urlLanguage = new URL(window.location.href).searchParams.get("lang");
   let savedLanguage;
   try {
